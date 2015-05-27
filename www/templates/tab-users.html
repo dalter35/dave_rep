@@ -1,0 +1,16 @@
+<ion-view view-title="Users">
+  <ion-content ng-controller="CardsCtrl">
+      <td-cards>
+        <td-card ng-repeat="card in cards" on-destroy="cardDestroyed($index)" on-swipe-left="downvote(card)" on-swipe-right="upvote(card)">
+          <div class="image">
+            <div class="no-text">NOPE</div>
+            <img ng-src="{{card.photo}}">
+            <div class="yes-text">LIKE</div>
+          </div>
+          <div class='td-footer'>
+            {{card.name}}, {{25}}
+          </div>
+        </td-card>
+      </td-cards>
+  </ion-content>
+</ion-view>
